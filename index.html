@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoberEditor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="sponsor" autoplay loop playsinline id="backgroundVideo" src="assets/bober.mp4" type="video/mp4">
+        <img src="assets/openaipowered.jpeg" alt="Sponsored" id="sponsoredImage">
+        <div id="sponsoredText">Sponsored</div>
+    </div> 
+
+    <div id="app">
+
+        <div class="welcome-message">Witamy w ja pierdole bobereditor</div>
+
+        <video autoplay loop playsinline id="backgroundVideo">
+            <source src="assets/bober.mp4" type="video/mp4" >
+            Your browser does not support the video tag.
+        </video>
+
+        <section>
+            <div id="existingProjects" style="display: none;">
+                <ul id="projectList"></ul>
+            </div>
+
+            <div id="fileTreeView" style="display: none;">
+                <h3>Project Files</h3>
+                <ul id="fileList"></ul>
+            </div>  
+        
+            <div>
+                <div id="setHomeFolder">
+                    <input type="text" id="homeFolderName" placeholder="Enter project name">
+                    <button id="setHomeFolderBtn">Set Home Folder</button>
+                    <button id="clearProjectsBtn">Clear All Projects</button>
+                </div>
+
+                <div id="editorControls" style="display: none;">
+                    <button id="startEditorBtn">Start Editor</button>
+                    <button id="createFileBtn" style="display: none;">Create File</button>
+                    <button id="deleteFileBtn" style="display: none;">Delete File</button>
+                </div>
+                <div id="editor" style="display: none;">
+                    <textarea id="fileEditor"></textarea>
+                    <button id="saveBtn">Save</button>
+                </div>
+
+                <div id="downloadBtn" style="display: none;">
+                    <button id="downloadZipBtn">Download Project</button>
+                </div>
+
+            </div>
+        </section>
+        
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

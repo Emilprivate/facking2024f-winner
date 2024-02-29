@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    overflow: hidden; /* Prevents scrolling */
+}
+
+#backgroundVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -100; /* Ensures it stays in the background */
+}
+
+#app {
+    position: relative;
+    z-index: 1; 
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#editorControls, #editor {
+    margin-top: 20px;
+}
+
+#setHomeFolder {
+    display: flex;
+    flex-direction: column; /* This will stack child elements vertically */
+    align-items: center; /* Center align items horizontally, adjust as needed */
+    margin-bottom: 20px;
+}
+
+
+#homeFolderName {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+@keyframes rainbowText {
+    0% {color: red;}
+    14% {color: orange;}
+    28% {color: yellow;}
+    42% {color: green;}
+    57% {color: blue;}
+    71% {color: indigo;}
+    85% {color: violet;}
+    100% {color: red;}
+}
+
+.welcome-message {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    animation: rainbowText 5s infinite linear;
+}
+
+
+#sponsor {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-align: center;
+    z-index: 1000;
+}
+
+#sponsoredImage {
+    max-width: 100px; /* Adjust based on your image size and preference */
+    height: auto;
+}
+
+#sponsoredText {
+    font-size: 12px;
+    color: #f6f6f6;
+    margin-top: 5px;
+}
+
+section {
+    display: flex;
+    justify-content: space-around; /* Adjust this as needed */
+    align-items: flex-start; /* Align items at the start of the flex container */
+    width: 100%; /* Ensure section takes full width */
+}
+
+div > div { /* Targeting divs directly inside the section but not the #fileTreeView */
+    flex: 3; /* Takes up more space than the fileTreeView */
+    padding: 10px; /* Consistent padding */
+    /* Optional: Add more styling as needed */
+}
+
+@media (max-width: 768px) {
+    section {
+        flex-direction: column;
+    }
+}
+
+#fileTreeView {
+    /*background-color: #f0f0f0;*/
+    padding: 10px;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+#fileTreeView ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#fileTreeView li {
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+#fileTreeView li:hover {
+    background-color: #ddd;
+}
+
+#editor {
+    margin-top: 20px;
+}
+
+textarea#fileEditor {
+    width: calc(100% - 20px);
+    height: 150px;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+}
+
+section {
+    display: flex;
+    align-items: flex-start;
+}
+
+div > div {
+    margin-right: 20px;
+}
+
+#projectList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#projectList li {
+    cursor: pointer;
+    margin: 5px;
+    padding: 5px;
+    background-color: #f0f0f0;
+}
+
+#projectList li:hover {
+    background-color: #ddd;
+}
+
+#clearProjectsBtn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#clearProjectsBtn:hover {
+    background-color: #ff1a1a;
+}
